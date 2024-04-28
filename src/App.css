@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+.App{
+  width: 100vw;
+  height: 100vh;
+ 
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar{
+  height: auto;
+  width: 250px;
+  background-color: #2f4050;
+  overflow-y: auto;
+}
+.Sidebarlist{
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+.Sidebarlist .row{
+  width: 100%;
+  height: 60px;
+  list-style-type: none;
+  margin: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction:row-reverse;
+  color: aliceblue;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.row #icon{
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+.row #title{
+  flex: 70%;
+}
+.Sidebarlist .row:hover{
+  cursor: pointer;
+  background-color: #293846;
+}
+.Sidebarlist #active{
+  background-color: #293846;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar{
+  width: 100%;
+  height: 4rem;
+
+}
+#logo{
+  width: 60px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+#heading{
+  margin-right: 40px;
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aliceblue;
+  font-weight: 450;
+  font-size: 25px;
+}
+#heading span{
+  color: red;
+  
+}
+.wrapper{
+  height: 600px;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #e3f2fd;
+}
+.welcome{
+  margin-left: 350px;
+  margin-top: 200px;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+@keyframes textclip {
   to {
-    transform: rotate(360deg);
+    background-position: 200% center;
   }
 }
+.welcome h1{
+  font-size: 75px;
+}
+
+#taskcontainer{
+  overflow-y: auto;
+  overflow-x: hidden;
+ 
+}
+::-webkit-scrollbar {
+  display: none; 
+   }
+
